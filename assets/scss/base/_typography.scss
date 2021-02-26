@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400&display=swap');
+
+$montserrat: Montserrat, sans-serif;
+$roboto_slab: Roboto Slab, serif;
+
+@mixin typography-h1 {
+	font-family: $montserrat;
+	font-weight: 300;
+	font-size: rem(96px);
+	letter-spacing: rem(-1.5px);
+	line-height: 100%;
+}
+
+@mixin typography-h2 {
+	font-family: $montserrat;
+	font-weight: 300;
+	font-size: rem(60px);
+	letter-spacing: rem(-0.5px);
+	line-height: 100%;
+}
+
+@mixin typography-h3 {
+	font-family: $montserrat;
+	font-weight: 300;
+	font-size: rem(48px);
+	letter-spacing: rem(0px);
+	line-height: 100%;
+}
+
+@mixin typography-h4 {
+	font-family: $montserrat;
+	font-weight: 400;
+	font-size: rem(34px);
+	letter-spacing: rem(0.25px);
+	line-height: 130%;
+}
+
+@mixin typography-h5 {
+	font-family: $montserrat;
+	font-weight: 500;
+	font-size: rem(24px);
+	letter-spacing: rem(0px);
+	line-height: 130%;
+}
+
+@mixin typography-h6 {
+	font-family: $montserrat;
+	font-weight: 500;
+	font-size: rem(20px);
+	letter-spacing: rem(0.15px);
+	line-height: 130%;
+}
+
+@mixin typography-subtitle-1 {
+	font-family: $montserrat;
+	font-weight: 600;
+	font-size: rem(16px);
+	letter-spacing: rem(0.15px);
+	line-height: 150%;
+}
+
+@mixin typography-subtitle-2 {
+	font-family: $montserrat;
+	font-weight: 600;
+	font-size: rem(14px);
+	letter-spacing: rem(0.1px);
+	line-height: 150%;
+}
+
+@mixin typography-body-1 {
+	font-family: $roboto_slab;
+	font-weight: 300;
+	font-size: rem(16px);
+	letter-spacing: rem(0.5px);
+	line-height: 170%;
+}
+
+@mixin typography-body-2 {
+	font-family: $roboto_slab;
+	font-weight: 300;
+	font-size: rem(14px);
+	letter-spacing: rem(0.25px);
+	line-height: 170%;
+}
+
+@mixin typography-button {
+	font-family: $montserrat;
+	font-weight: 700;
+	font-size: rem(16px);
+	letter-spacing: rem(1.25px);
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+@mixin typography-caption {
+	font-family: $roboto_slab;
+	font-weight: 400;
+	font-size: rem(14px);
+	letter-spacing: rem(0.4px);
+	line-height: 170%;
+}
+
+@mixin typography-overline {
+	font-family: $roboto_slab;
+	font-weight: 400;
+	font-size: rem(12px);
+	letter-spacing: rem(1.5px);
+	line-height: 170%;
+}
+
+@mixin typography-navigation {
+	font-family: $roboto_slab;
+	font-weight: 400;
+	font-size: rem(14px);
+	letter-spacing: rem(1.5px);
+	line-height: 170%;
+}

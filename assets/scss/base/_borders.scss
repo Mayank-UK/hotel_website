@@ -1,0 +1,29 @@
+@mixin border-light {
+	border: 1px solid $color-border-light;
+	border-radius: rem(2px);
+}
+
+@mixin border-dark {
+	border: 1px solid $color-border-dark;
+	border-radius: rem(2px);
+}
+
+@mixin border-primary {
+	border: 2px solid $color-primary;
+	border-radius: rem(2px);
+}
+
+@mixin border-secondary {
+	border: 2px solid $color-secondary;
+	border-radius: rem(2px);
+}
+
+@mixin border-error {
+	border: 2px solid $color-error;
+	border-radius: rem(2px);
+}
+
+@mixin border-succes {
+	border: 2px solid $color-success;
+	border-radius: rem(2px);
+}

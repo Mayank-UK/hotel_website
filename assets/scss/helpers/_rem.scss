@@ -1,0 +1,5 @@
+// pass the value as pixel, example rem(160px), don't forget to add the 'px' with the value
+
+@function rem($size) {
+	@return $size / 16px * 1rem;
+}

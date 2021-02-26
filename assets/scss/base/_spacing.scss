@@ -1,0 +1,98 @@
+$sizes: (
+	'xs': 8px,
+	'sm': 16px,
+	'md': 32px,
+	'lg': 64px,
+	'xl': 128px,
+);
+
+// margin
+@mixin margin-top($size) {
+	margin-top: rem(map-get($sizes, $size));
+}
+
+@mixin margin-right($size) {
+	margin-right: rem(map-get($sizes, $size));
+}
+
+@mixin margin-bottom($size) {
+	margin-bottom: rem(map-get($sizes, $size));
+}
+
+@mixin margin-left($size) {
+	margin-left: rem(map-get($sizes, $size));
+}
+
+// padding
+@mixin padding-top($size) {
+	padding-top: rem(map-get($sizes, $size));
+}
+
+@mixin padding-right($size) {
+	padding-right: rem(map-get($sizes, $size));
+}
+
+@mixin padding-bottom($size) {
+	padding-bottom: rem(map-get($sizes, $size));
+}
+
+@mixin padding-left($size) {
+	padding-left: rem(map-get($sizes, $size));
+}
+
+// spacing techniques
+@mixin padding-inset($size) {
+	padding: rem(map-get($sizes, $size));
+}
+
+@mixin padding-inset-squish($size) {
+	@if ($size == xs) {
+		padding: rem(8px) rem(16px) rem(8px) rem(16px);
+	} @else if($size == sm) {
+		padding: rem(16px) rem(32px) rem(16px) rem(32px);
+	} @else if($size == md) {
+		padding: rem(32px) rem(64px) rem(32px) rem(64px);
+	} @else if($size == lg) {
+		padding: rem(64px) rem(128px) rem(64px) rem(128px);
+	}
+}
+
+@mixin padding-inset-stretch($size) {
+	@if ($size == xs) {
+		padding: rem(16px) rem(8px) rem(16px) rem(8px);
+	} @else if($size == sm) {
+		padding: rem(32px) rem(16px) rem(32px) rem(16px);
+	} @else if($size == md) {
+		padding: rem(64px) rem(32px) rem(64px) rem(32px);
+	} @else if($size == lg) {
+		padding: rem(128px) rem(64px) rem(128px) rem(64px);
+	}
+}
+
+@mixin margin-stack($size) {
+	@if ($size == xs) {
+		margin: rem(8px) rem(0px) rem(8px) rem(0px);
+	} @else if($size == sm) {
+		margin: rem(16px) rem(0px) rem(16px) rem(0px);
+	} @else if($size == md) {
+		margin: rem(32px) rem(0px) rem(32px) rem(0px);
+	} @else if ($size == lg) {
+		margin: rem(64px) rem(0px) rem(64px) rem(0px);
+	} @else if($size == xl) {
+		margin: rem(128px) rem(0px) rem(128px) rem(0px);
+	}
+}
+
+@mixin margin-inline($size) {
+	@if ($size == xs) {
+		margin: rem(0px) rem(8px) rem(0px) rem(8px);
+	} @else if($size == sm) {
+		margin: rem(0px) rem(16px) rem(0px) rem(16px);
+	} @else if($size == md) {
+		margin: rem(0px) rem(32px) rem(0px) rem(32px);
+	} @else if ($size == lg) {
+		margin: rem(0px) rem(64px) rem(0px) rem(64px);
+	} @else if($size == xl) {
+		margin: rem(0px) rem(128px) rem(0px) rem(128px);
+	}
+}

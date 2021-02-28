@@ -1,0 +1,87 @@
+.c-button {
+	@include typography-button;
+	@include padding-inset(xs);
+	// @include border-primary;
+
+	background: $color-primary;
+	color: $color-heading-light;
+	display: inline-block;
+	transition: all 0.3s ease;
+	text-decoration: none;
+
+	&:hover {
+		background: $color-primary;
+		color: $color-heading-light;
+		cursor: pointer;
+	}
+
+	&:focus {
+		background: $color-primary-dark;
+		color: $color-heading-light;
+
+		outline: $outline-primary;
+	}
+
+	&--large {
+		@include padding-inset-squish(sm);
+	}
+}
+
+.c-feature-card {
+	&__row {
+		@extend .row;
+	}
+
+	&__col-text {
+		@extend .col-md-6;
+		@extend .order-2;
+	}
+
+	&__col-img {
+		@extend .col-md-6;
+		@extend .order-1;
+	}
+
+	&__title {
+		@include typography-h4;
+		@include margin-top(md);
+		@include margin-bottom(sm);
+	}
+
+	&__img {
+		height: rem(512px);
+		object-fit: cover;
+		width: 100%;
+	}
+
+	&__description {
+	}
+
+	&--right {
+		.c-feature-card__title {
+			text-align: right;
+		}
+
+		.c-feature-card__description {
+			text-align: right;
+		}
+	}
+}
+
+.c-offer {
+	&__img {
+		height: rem(256px);
+		object-fit: cover;
+		width: 100%;
+	}
+
+	&__title {
+		@include typography-h4;
+		@include margin-top(sm);
+		@include margin-bottom(sm);
+	}
+
+	&__button {
+		@include margin-top(md);
+	}
+}

@@ -20,7 +20,7 @@
 
 -   ## Introduction
 
-    -   This is a portfolio project.
+    -   This is a personal redesign of hotel terra jackson hole.
 
 -   ## Getting started
 
@@ -86,6 +86,7 @@
     -   Just put the project files into the root of the web server
 -   ## Contributing
     -   This is an individually developed project
+    -   All the images used here are from hotel terra jackson website
 -   ## Versioning
     -   There is no versioning for this project
 -   ## Authors
@@ -95,3 +96,4 @@
     -   MIT licence
 -   ## Acknowledgement
     -   This project acknowledges the effort of all the developers who develops, maintains and make their work free to use for other small developers like me, without their intellectual thoughts, plugins, libraries and tools this project would have not been possible.
+    -   This project uses digital resources from hotel terra jackson website like images, etc, for personal use and I do not claim any rights on their property

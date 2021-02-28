@@ -1,0 +1,211 @@
+.m-nav-desktop {
+	background: $background-body-dark;
+	position: fixed;
+	display: none;
+	top: 0px;
+	width: 100%;
+	z-index: 2;
+
+	&__container {
+		@extend .container-fluid;
+	}
+
+	&__content {
+		@extend .d-flex;
+		@extend .justify-content-between;
+		@extend .align-items-center;
+
+		@include padding-inset(sm);
+	}
+
+	&__logo {
+		@include typography-body-2;
+		color: $color-primary;
+		letter-spacing: 5px;
+	}
+
+	&__list {
+		@extend .d-flex;
+		@extend .align-items-center;
+	}
+
+	&__list-item {
+		margin-right: rem(32px);
+		transition: all 0.3s ease;
+	}
+
+	&__anchor {
+		@include padding-inset(xs);
+		@include typography-navigation;
+		color: $color-heading-dark;
+		text-decoration: none;
+
+		&--active {
+			border-bottom: 2px solid $color-primary;
+			color: $color-primary;
+			transition: all 0.3s ease;
+		}
+	}
+
+	@include breakpoint-up(md) {
+		display: block;
+		left: 0px;
+	}
+}
+
+.m-nav-mobile {
+	@extend .d-flex;
+	@extend .justify-content-between;
+	@extend .align-items-center;
+	@include padding-inset(sm);
+
+	background: $background-body-dark;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 2;
+
+	&__logo {
+		background-image: url('./../images/icons_logos/logo.svg');
+		background-size: cover;
+		display: block;
+		height: rem(40px);
+		width: rem(64px);
+	}
+
+	&__hamburger {
+		@include padding-inset(xs);
+		background: none;
+		border: none;
+
+		&:focus {
+			outline: $outline-primary;
+		}
+	}
+
+	&__hamburger-piece-1 {
+		background: $color-primary;
+		height: rem(4px);
+		margin-bottom: rem(6px);
+		width: 16vw;
+	}
+
+	&__hamburger-piece-2 {
+		background: $color-primary;
+
+		height: rem(4px);
+		width: 16vw;
+	}
+
+	&__panel {
+		background: $background-body-dark;
+		height: 100vh;
+		left: 0px;
+		position: fixed;
+		box-shadow: $shadow-navigation;
+		top: 0px;
+		transition: all 0.3s ease;
+		width: 80vw;
+		z-index: 2;
+	}
+
+	&__panel-cross-button {
+		@include padding-inset(sm);
+		background: none;
+		border: none;
+		float: right;
+		margin-top: 32px;
+		margin-right: 32px;
+
+		&:focus {
+			outline: $outline-primary;
+		}
+	}
+
+	&__panel-cross-icon {
+		background-image: url('./../images/icons_logos/cross.svg');
+		background-size: cover;
+		display: block;
+		height: rem(32px);
+		width: rem(32px);
+	}
+
+	&__panel-button {
+		@include margin-left(xs);
+	}
+
+	&__panel--hide {
+		left: -100vw;
+		transition: all 0.5s ease;
+	}
+
+	&__panel-logo {
+		background-image: url('./../images/icons_logos/logo.svg');
+		background-size: cover;
+		display: block;
+		height: rem(40px);
+		width: rem(64px);
+
+		margin-top: 20vh;
+		margin-bottom: 10vh;
+		margin-left: 22%;
+	}
+
+	&__panel-list {
+		@extend .d-flex;
+		@extend .flex-column;
+
+		margin-left: 20%;
+	}
+
+	&__panel-list-item {
+		@include margin-bottom(md);
+	}
+
+	&__anchor {
+		@include padding-inset(xs);
+		@include typography-navigation;
+		color: $color-heading-light;
+		text-decoration: none;
+
+		&--active {
+			border-bottom: 2px solid $color-primary;
+			color: $color-primary;
+			transition: all 0.3s ease;
+		}
+	}
+
+	@include breakpoint-up(md) {
+		display: none !important;
+	}
+}
+
+.m-main-section {
+	@include padding-top(lg);
+	@include padding-bottom(lg);
+
+	&__container {
+		@extend .container-fluid;
+	}
+
+	&__title {
+		@include typography-h4;
+		@include margin-left(sm);
+		@include margin-bottom(lg);
+	}
+}
+
+.m-offer-section {
+	&__container {
+		@extend .container;
+	}
+
+	&__row {
+		@extend .row;
+	}
+
+	&__col {
+		@extend .col-lg-6;
+		@include margin-bottom(lg);
+	}
+}

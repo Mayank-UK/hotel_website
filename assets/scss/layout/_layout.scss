@@ -1,0 +1,189 @@
+.l-header {
+	height: 100vh;
+	// position: relative;
+
+	&__video {
+		background: red;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		top: 0px;
+		z-index: -1;
+	}
+
+	&__container {
+		@extend .container-fluid;
+	}
+}
+
+.l-hero {
+	@include padding-inset(md);
+	@include margin-left(sm);
+
+	background: $background-body-dark;
+	margin-top: rem(128px);
+	width: 70vw;
+
+	&__logo {
+		background-image: url('./../images/icons_logos/logo.svg');
+		background-size: cover;
+		display: block;
+		height: rem(74px);
+		width: rem(128px);
+	}
+
+	&__text {
+		@include typography-h6;
+		@include margin-top(sm);
+		color: $color-heading-light;
+	}
+
+	&__button {
+		@include margin-top(sm);
+		display: block;
+	}
+}
+
+.l-achievements {
+	&__row {
+		@extend .row;
+	}
+
+	&__col-img {
+		@extend .col-6;
+		@extend .col-lg-2;
+
+		margin: 0px auto 0px auto;
+	}
+
+	&__img {
+		margin: auto 0 auto 0;
+		width: 100%;
+	}
+
+	&__col-text {
+		@extend .col-lg-10;
+	}
+
+	&__text {
+		@include margin-top(sm);
+	}
+}
+
+.l-main {
+	&__img {
+		background-size: cover;
+		height: 100vh;
+		object-fit: cover;
+		width: 100%;
+	}
+}
+
+.l-feature-card-wrapper {
+	@include margin-bottom(lg);
+}
+
+.l-footer {
+	@include padding-inset(sm);
+
+	background: $background-body-dark;
+
+	&__content {
+		@extend .d-flex;
+	}
+
+	&__logo {
+		background-image: url('./../images/icons_logos/logo.svg');
+		background-size: contain;
+		display: block;
+		height: rem(40px);
+		width: rem(64px);
+	}
+
+	&__sections {
+		@include margin-left(md);
+	}
+
+	&__subtitle {
+		@include typography-subtitle-2;
+		@include margin-bottom(sm);
+		color: $color-heading-light;
+	}
+
+	&__address {
+		@include margin-bottom(md);
+		color: $color-body-light;
+	}
+
+	&__address-line {
+		@include typography-body-2;
+	}
+
+	&__button {
+		@include margin-top(sm);
+	}
+
+	&__phone {
+		@include margin-bottom(md);
+	}
+
+	&__number {
+		@include typography-body-2;
+		color: $color-body-light;
+	}
+
+	&__links {
+		@include margin-bottom(md);
+	}
+
+	&__list-link {
+		@include margin-bottom(xs);
+	}
+
+	&__anchor {
+		color: $color-body-light;
+		@include typography-body-2;
+	}
+
+	&__social {
+	}
+
+	&__social-icon {
+		@include margin-right(xs);
+		background-size: contain;
+		display: inline-block;
+		height: rem(24px);
+		width: rem(24px);
+
+		&--facebook {
+			background-image: url('./../images/icons_logos/cross.svg');
+		}
+
+		&--twitter {
+			background-image: url('./../images/icons_logos/cross.svg');
+		}
+
+		&--google-plus {
+			background-image: url('./../images/icons_logos/cross.svg');
+		}
+
+		&--instagram {
+			background-image: url('./../images/icons_logos/cross.svg');
+		}
+	}
+
+	&__copyright {
+		@include margin-top(lg);
+		@include typography-body-2;
+
+		@extend .d-flex;
+		@extend .align-items-center;
+		color: $color-body-light;
+	}
+
+	&__copyright-symbol {
+		@include typography-h6;
+		@include margin-top(xs);
+		@include margin-right(xs);
+	}
+}

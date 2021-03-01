@@ -46,6 +46,10 @@
 		@include typography-h4;
 		@include margin-top(md);
 		@include margin-bottom(sm);
+
+		@include breakpoint-up(md) {
+			margin-top: rem(128px);
+		}
 	}
 
 	&__img {
@@ -55,9 +59,18 @@
 	}
 
 	&__description {
+		@include typography-body-2;
 	}
 
 	&--right {
+		.c-feature-card__col-text {
+			@extend .order-1;
+		}
+
+		.c-feature-card__col-img {
+			@extend .order-2;
+		}
+
 		.c-feature-card__title {
 			text-align: right;
 		}
@@ -69,16 +82,26 @@
 }
 
 .c-offer {
+	background: $background-body-gradient;
+
 	&__img {
 		height: rem(256px);
 		object-fit: cover;
 		width: 100%;
 	}
 
+	&__content {
+		@include padding-inset(sm);
+	}
+
 	&__title {
 		@include typography-h4;
 		@include margin-top(sm);
 		@include margin-bottom(sm);
+	}
+
+	&__description {
+		@include typography-body-2;
 	}
 
 	&__button {

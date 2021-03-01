@@ -8,13 +8,20 @@
 	</head>
 	<body>
 		<header class="l-header">
-			<video class="l-header__video" src=""></video>
+			<video
+				class="l-header__video"
+				poster="./assets/images/home/gallery-13.jpg"
+				src="./assets/videos/home.mp4"
+				autoplay
+				loop
+				muted
+			></video>
 
 			<nav class="m-nav-desktop">
 				<div class="m-nav-desktop__container">
 					<div class="m-nav-desktop__content">
 						<i class="m-nav-desktop__logo"></i>
-						<ul class="m-nav-desktop__list">
+						<ul class="m-nav-desktop__list-middle">
 							<li class="m-nav-desktop__list-item">
 								<a href="" class="m-nav-desktop__anchor"
 									>Resorts</a
@@ -35,6 +42,8 @@
 									>Reservation</a
 								>
 							</li>
+						</ul>
+						<ul class="m-nav-desktop__list-end">
 							<li class="m-nav-desktop__list-item">
 								<a href="" class="m-nav-desktop__anchor"
 									>About us</a
@@ -157,11 +166,7 @@
 				</div>
 			</section>
 
-			<img
-				src="./assets/images/home/gallery-14.jpg"
-				alt="snowfall on trees"
-				class="l-main__img"
-			/>
+			<div class="l-main__img l-main__img--first"></div>
 
 			<section class="m-main-section">
 				<div class="m-main-section__container">
@@ -365,11 +370,7 @@
 				</div>
 			</section>
 
-			<img
-				src="./assets/images/home/sign of man on bull.jpg"
-				alt="man riding on a bull sign"
-				class="l-main__img"
-			/>
+			<div class="l-main__img l-main__img--second"></div>
 
 			<section class="m-main-section">
 				<div class="m-main-section__container">
@@ -386,20 +387,23 @@
 											alt="hotel view at evening"
 											class="c-offer__img"
 										/>
-										<h4 class="c-offer__title">
-											4th Night On Us
-										</h4>
-										<p class="c-offer__description">
-											What are you going to do with your
-											extra day? Whether you ski more, spa
-											more, or explore Jackson Hole more…
-											your extra night is on us!
-										</p>
-										<a
-											href="#"
-											class="c-offer__button c-button c-button--large"
-											>More</a
-										>
+										<div class="c-offer__content">
+											<h4 class="c-offer__title">
+												4th Night On Us
+											</h4>
+											<p class="c-offer__description">
+												What are you going to do with
+												your extra day? Whether you ski
+												more, spa more, or explore
+												Jackson Hole more… your extra
+												night is on us!
+											</p>
+											<a
+												href="#"
+												class="c-offer__button c-button c-button--large"
+												>More</a
+											>
+										</div>
 									</div>
 								</div>
 
@@ -412,21 +416,24 @@
 											alt="hotel view at evening"
 											class="c-offer__img"
 										/>
-										<h4 class="c-offer__title">
-											Gift Cards Now Available
-										</h4>
-										<p class="c-offer__description">
-											Give the gift of adventure,
-											exhilaration and relaxation in
-											Jackson Hole. Gift cards for Hotel
-											Terra Jackson Hole and CHILL Spa are
-											now available for purchase.
-										</p>
-										<a
-											href="#"
-											class="c-offer__button c-button c-button--large"
-											>More</a
-										>
+										<div class="c-offer__content">
+											<h4 class="c-offer__title">
+												Gift Cards Available
+											</h4>
+											<p class="c-offer__description">
+												Give the gift of adventure,
+												exhilaration and relaxation in
+												Jackson Hole. Gift cards for
+												Hotel Terra Jackson Hole and
+												CHILL Spa are now available for
+												purchase.
+											</p>
+											<a
+												href="#"
+												class="c-offer__button c-button c-button--large"
+												>More</a
+											>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -435,11 +442,7 @@
 				</div>
 			</section>
 
-			<img
-				src="./assets/images/home/gallery-11.jpg"
-				alt="kid in snow"
-				class="l-main__img"
-			/>
+			<div class="l-main__img l-main__img--third"></div>
 
 			<section class="m-main-section">
 				<div class="m-main-section__container">
@@ -453,9 +456,11 @@
 
 		<footer class="l-footer">
 			<div class="l-footer__container">
-				<div class="l-footer__content">
-					<i class="l-footer__logo"></i>
-					<div class="l-footer__sections">
+				<div class="l-footer__row">
+					<div class="l-footer__col-logo">
+						<i class="l-footer__logo"></i>
+					</div>
+					<div class="l-footer__col-details">
 						<div class="l-footer__address">
 							<p class="l-footer__subtitle">Address</p>
 							<div class="l-footer__address-lines">

@@ -19,25 +19,32 @@
 	}
 
 	&__logo {
-		@include typography-body-2;
-		color: $color-primary;
-		letter-spacing: 5px;
+		background-image: url('./../images/icons_logos/logo.svg');
+		background-size: cover;
+		display: block;
+		height: rem(40px);
+		width: rem(64px);
 	}
 
-	&__list {
+	&__list-middle {
+		@extend .d-flex;
+		@extend .align-items-center;
+	}
+
+	&__list-end {
 		@extend .d-flex;
 		@extend .align-items-center;
 	}
 
 	&__list-item {
-		margin-right: rem(32px);
+		@include margin-right(sm);
 		transition: all 0.3s ease;
 	}
 
 	&__anchor {
 		@include padding-inset(xs);
 		@include typography-navigation;
-		color: $color-heading-dark;
+		color: $color-heading-light;
 		text-decoration: none;
 
 		&--active {
@@ -84,14 +91,14 @@
 	}
 
 	&__hamburger-piece-1 {
-		background: $color-primary;
+		background: $color-body-light;
 		height: rem(4px);
 		margin-bottom: rem(6px);
 		width: 16vw;
 	}
 
 	&__hamburger-piece-2 {
-		background: $color-primary;
+		background: $color-body-light;
 
 		height: rem(4px);
 		width: 16vw;
@@ -205,7 +212,7 @@
 	}
 
 	&__col {
-		@extend .col-lg-6;
+		@extend .col-md-6;
 		@include margin-bottom(lg);
 	}
 }

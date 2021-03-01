@@ -1,11 +1,14 @@
 .l-header {
 	height: 100vh;
-	// position: relative;
+	position: relative;
+	//dirty trick to make video stick to top
+	padding-top: rem(1px);
+	top: 0px;
 
 	&__video {
-		background: red;
 		height: 100%;
 		position: absolute;
+		object-fit: cover;
 		width: 100%;
 		top: 0px;
 		z-index: -1;
@@ -22,7 +25,10 @@
 
 	background: $background-body-dark;
 	margin-top: rem(128px);
-	width: 70vw;
+
+	&__container {
+		@extend .container-fluid;
+	}
 
 	&__logo {
 		background-image: url('./../images/icons_logos/logo.svg');
@@ -33,7 +39,7 @@
 	}
 
 	&__text {
-		@include typography-h6;
+		@include typography-h4;
 		@include margin-top(sm);
 		color: $color-heading-light;
 	}
@@ -41,6 +47,14 @@
 	&__button {
 		@include margin-top(sm);
 		display: block;
+	}
+
+	@include breakpoint-up(md) {
+		width: 60%;
+	}
+
+	@include breakpoint-up(lg) {
+		width: 50%;
 	}
 }
 
@@ -51,7 +65,7 @@
 
 	&__col-img {
 		@extend .col-6;
-		@extend .col-lg-2;
+		@extend .col-md-2;
 
 		margin: 0px auto 0px auto;
 	}
@@ -62,20 +76,46 @@
 	}
 
 	&__col-text {
-		@extend .col-lg-10;
+		@extend .col-md-10;
+		@extend .d-flex;
+		@extend .align-items-center;
 	}
 
 	&__text {
 		@include margin-top(sm);
+		@include typography-body-2;
+
+		@include breakpoint-up(md) {
+			margin-top: 0px;
+		}
 	}
 }
 
 .l-main {
 	&__img {
+		background-position: center;
+		background-repeat: no-repeat;
 		background-size: cover;
 		height: 100vh;
-		object-fit: cover;
 		width: 100%;
+
+		&--first {
+			background: url('./../images/home/gallery-14.jpg');
+			//have to use attachment here, other not working outside this block
+			background-attachment: fixed;
+		}
+
+		&--second {
+			background: url('./../images/home/sign-of-man-on-bull.jpg');
+			//have to use attachment here, other not working outside this block
+			background-attachment: fixed;
+		}
+
+		&--third {
+			background: url('./../images/home/gallery-11.jpg');
+			//have to use attachment here, other not working outside this block
+			background-attachment: fixed;
+		}
 	}
 }
 
@@ -84,24 +124,33 @@
 }
 
 .l-footer {
-	@include padding-inset(sm);
+	@include padding-inset-stretch(sm);
 
 	background: $background-body-dark;
 
-	&__content {
-		@extend .d-flex;
+	&__container {
+		@extend .container-fluid;
+	}
+
+	&__row {
+		@extend .row;
+	}
+
+	&__col-logo {
+		@extend .col-3;
+	}
+
+	&__col-details {
+		@extend .col-9;
 	}
 
 	&__logo {
 		background-image: url('./../images/icons_logos/logo.svg');
 		background-size: contain;
-		display: block;
+		background-repeat: no-repeat;
+		display: inline-block;
 		height: rem(40px);
 		width: rem(64px);
-	}
-
-	&__sections {
-		@include margin-left(md);
 	}
 
 	&__subtitle {
@@ -113,6 +162,10 @@
 	&__address {
 		@include margin-bottom(md);
 		color: $color-body-light;
+
+		@include breakpoint-up(md) {
+			display: inline-block;
+		}
 	}
 
 	&__address-line {
@@ -125,6 +178,17 @@
 
 	&__phone {
 		@include margin-bottom(md);
+
+		@include breakpoint-up(md) {
+			@include margin-left(md);
+
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		@include breakpoint-up(lg) {
+			@include margin-left(lg);
+		}
 	}
 
 	&__number {
@@ -134,6 +198,16 @@
 
 	&__links {
 		@include margin-bottom(md);
+
+		@include breakpoint-up(md) {
+			@include margin-left(md);
+
+			display: inline-block;
+		}
+
+		@include breakpoint-up(lg) {
+			@include margin-left(lg);
+		}
 	}
 
 	&__list-link {
@@ -146,6 +220,16 @@
 	}
 
 	&__social {
+		@include breakpoint-up(lg) {
+			@include margin-left(md);
+			display: inline-block;
+		}
+
+		@include breakpoint-up(lg) {
+			@include margin-left(lg);
+
+			vertical-align: top;
+		}
 	}
 
 	&__social-icon {
@@ -156,19 +240,22 @@
 		width: rem(24px);
 
 		&--facebook {
-			background-image: url('./../images/icons_logos/cross.svg');
+			background-image: url('./../images/icons_logos/facebook.svg');
+			background-image: url('./../images/icons_logos/google_plus.svg');
 		}
 
 		&--twitter {
-			background-image: url('./../images/icons_logos/cross.svg');
+			background-image: url('./../images/icons_logos/twitter.svg');
+			background-image: url('./../images/icons_logos/google_plus.svg');
 		}
 
 		&--google-plus {
-			background-image: url('./../images/icons_logos/cross.svg');
+			background-image: url('./../images/icons_logos/google_plus.svg');
 		}
 
 		&--instagram {
-			background-image: url('./../images/icons_logos/cross.svg');
+			background-image: url('./../images/icons_logos/instagram.svg');
+			background-image: url('./../images/icons_logos/google_plus.svg');
 		}
 	}
 
@@ -183,7 +270,8 @@
 
 	&__copyright-symbol {
 		@include typography-h6;
-		@include margin-top(xs);
 		@include margin-right(xs);
+
+		margin-top: rem(4px);
 	}
 }

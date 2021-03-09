@@ -46,8 +46,8 @@
 }
 
 [class*='col-'] {
-	padding-left: rem(16px);
-	padding-right: rem(16px);
+	@include padding-left(sm);
+	@include padding-right(sm);
 }
 
 // code

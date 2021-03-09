@@ -14,13 +14,26 @@
 		z-index: -1;
 	}
 
+	&__img {
+		height: 100%;
+		position: absolute;
+		object-fit: cover;
+		width: 100%;
+		top: 0px;
+		z-index: -1;
+	}
+
 	&__container {
 		@extend .container-fluid;
+	}
+
+	&--non-100vh {
+		height: rem(70px);
 	}
 }
 
 .l-hero {
-	@include padding-inset(md);
+	@include padding(md);
 	@include margin-left(sm);
 
 	background: $background-body-dark;
@@ -31,6 +44,7 @@
 	}
 
 	&__logo {
+		@include margin-bottom(sm);
 		background-image: url('./../images/icons_logos/logo.svg');
 		background-size: cover;
 		display: block;
@@ -38,10 +52,15 @@
 		width: rem(128px);
 	}
 
-	&__text {
+	&__title {
 		@include typography-h4;
-		@include margin-top(sm);
 		color: $color-heading-light;
+	}
+
+	&__text {
+		@include typography-subtitle-2;
+		@include margin-top(sm);
+		color: $color-body-light;
 	}
 
 	&__button {
@@ -94,26 +113,27 @@
 .l-main {
 	&__img {
 		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
 		height: 100vh;
 		width: 100%;
 
 		&--first {
 			background: url('./../images/home/gallery-14.jpg');
-			//have to use attachment here, other not working outside this block
+			//have to use properties here, other not working outside this block
+			background-size: cover;
 			background-attachment: fixed;
 		}
 
 		&--second {
 			background: url('./../images/home/sign-of-man-on-bull.jpg');
-			//have to use attachment here, other not working outside this block
+			//have to use properties here, other not working outside this block
+			background-size: cover;
 			background-attachment: fixed;
 		}
 
 		&--third {
 			background: url('./../images/home/gallery-11.jpg');
-			//have to use attachment here, other not working outside this block
+			//have to use properties here, other not working outside this block
+			background-size: cover;
 			background-attachment: fixed;
 		}
 	}
@@ -124,7 +144,7 @@
 }
 
 .l-footer {
-	@include padding-inset-stretch(sm);
+	@include padding-stretch(sm);
 
 	background: $background-body-dark;
 
@@ -138,10 +158,12 @@
 
 	&__col-logo {
 		@extend .col-3;
+		@extend .col-md-2;
 	}
 
 	&__col-details {
 		@extend .col-9;
+		@extend .col-md-10;
 	}
 
 	&__logo {
@@ -261,6 +283,7 @@
 
 	&__copyright {
 		@include margin-top(lg);
+		@include margin-left(sm);
 		@include typography-body-2;
 
 		@extend .d-flex;
@@ -273,5 +296,51 @@
 		@include margin-right(xs);
 
 		margin-top: rem(4px);
+	}
+}
+
+.l-about-us {
+	@include margin-left(sm);
+	@include margin-right(sm);
+	@include typography-body-2;
+}
+
+.l-contact {
+	@include margin(sm);
+
+	&__address {
+		&-line {
+			@include typography-body-2;
+		}
+	}
+
+	&__phone {
+		@include margin-top(sm);
+
+		&-target {
+			@include typography-body-2;
+		}
+
+		&-number {
+			@include typography-body-2;
+			color: $color-primary;
+		}
+	}
+
+	&__email {
+		@include margin-top(sm);
+
+		&-target {
+			@include typography-body-2;
+		}
+
+		&-link {
+			@include typography-body-2;
+			color: $color-primary;
+
+			&--margin {
+				@include margin-bottom(sm);
+			}
+		}
 	}
 }

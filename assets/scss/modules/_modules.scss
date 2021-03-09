@@ -15,7 +15,7 @@
 		@extend .justify-content-between;
 		@extend .align-items-center;
 
-		@include padding-inset(sm);
+		@include padding(sm);
 	}
 
 	&__logo {
@@ -42,7 +42,7 @@
 	}
 
 	&__anchor {
-		@include padding-inset(xs);
+		@include padding(xs);
 		@include typography-navigation;
 		color: $color-heading-light;
 		text-decoration: none;
@@ -64,7 +64,7 @@
 	@extend .d-flex;
 	@extend .justify-content-between;
 	@extend .align-items-center;
-	@include padding-inset(sm);
+	@include padding(sm);
 
 	background: $background-body-dark;
 	position: fixed;
@@ -81,7 +81,7 @@
 	}
 
 	&__hamburger {
-		@include padding-inset(xs);
+		@include padding(xs);
 		background: none;
 		border: none;
 
@@ -117,7 +117,7 @@
 	}
 
 	&__panel-cross-button {
-		@include padding-inset(sm);
+		@include padding(sm);
 		background: none;
 		border: none;
 		float: right;
@@ -170,7 +170,7 @@
 	}
 
 	&__anchor {
-		@include padding-inset(xs);
+		@include padding(xs);
 		@include typography-navigation;
 		color: $color-heading-light;
 		text-decoration: none;
@@ -214,5 +214,54 @@
 	&__col {
 		@extend .col-md-6;
 		@include margin-bottom(lg);
+	}
+}
+
+.m-reservation-form {
+	@include padding(sm);
+
+	&__field {
+		@include margin-bottom(sm);
+
+		@include breakpoint-up(md) {
+			margin-bottom: 0px;
+			display: inline-block;
+			width: 45%;
+		}
+
+		&--margin {
+			@include breakpoint-up(md) {
+				@include margin-left(sm);
+			}
+		}
+	}
+
+	&__input {
+		@include margin-top(xs);
+	}
+
+	&__button {
+		@include margin-top(md);
+
+		@include breakpoint-up(md) {
+			display: block;
+		}
+	}
+}
+
+.m-booking-paging {
+	text-align: center;
+
+	&__item {
+		@include margin-right(lg);
+		@include typography-body-2;
+		@include padding(xs);
+
+		display: inline-block;
+		cursor: pointer;
+
+		&--active {
+			@include typography-subtitle-2;
+		}
 	}
 }

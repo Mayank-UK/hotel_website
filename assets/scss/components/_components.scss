@@ -1,9 +1,10 @@
 .c-button {
 	@include typography-button;
-	@include padding-inset(xs);
+	@include padding(xs);
 	// @include border-primary;
 
 	background: $color-primary;
+	border: none;
 	color: $color-heading-light;
 	display: inline-block;
 	transition: all 0.3s ease;
@@ -23,7 +24,44 @@
 	}
 
 	&--large {
-		@include padding-inset-squish(sm);
+		@include padding-squish(sm);
+	}
+}
+
+.c-label {
+	@include typography-body-2;
+
+	color: $color-body-dark;
+	display: block;
+}
+
+.c-input {
+	@include padding-squish(xs);
+	@include typography-body-2;
+	@include border-dark;
+
+	background: $background-input-field;
+	color: $color-body-dark;
+	display: block;
+	transition: all 0.5s ease;
+	width: 100%;
+
+	&:focus {
+		outline: $outline-primary;
+	}
+}
+
+.c-textarea {
+	@include padding-squish(xs);
+	@include typography-body-2;
+	@include border-dark;
+
+	background: $background-input-field;
+	color: $color-body-dark;
+	width: 100%;
+
+	&:focus {
+		outline: $outline-primary;
 	}
 }
 
@@ -53,7 +91,7 @@
 	}
 
 	&__img {
-		height: rem(512px);
+		height: rem(680px);
 		object-fit: cover;
 		width: 100%;
 	}
@@ -64,11 +102,11 @@
 
 	&--right {
 		.c-feature-card__col-text {
-			@extend .order-1;
+			@extend .order-md-1;
 		}
 
 		.c-feature-card__col-img {
-			@extend .order-2;
+			@extend .order-md-2;
 		}
 
 		.c-feature-card__title {
@@ -85,13 +123,22 @@
 	background: $background-body-gradient;
 
 	&__img {
-		height: rem(256px);
+		height: rem(400px);
+		background-repeat: no-repeat;
 		object-fit: cover;
 		width: 100%;
+
+		&-1 {
+			background-image: url('./../images/offers/gallery-27.jpg');
+		}
+
+		&-2 {
+			background-image: url('./../images/offers/gift-dd.jpg');
+		}
 	}
 
 	&__content {
-		@include padding-inset(sm);
+		@include padding(sm);
 	}
 
 	&__title {
@@ -106,5 +153,59 @@
 
 	&__button {
 		@include margin-top(md);
+	}
+}
+
+.c-room-card {
+	border-radius: rem(4px);
+
+	&__fow {
+		@extend .row;
+	}
+
+	&__col-img-section {
+		@extend .col-md-5;
+	}
+
+	&__img {
+		height: rem(272px);
+		object-fit: cover;
+		width: 100%;
+	}
+
+	&__feature-list {
+		@include padding-left(sm);
+
+		&-item {
+			@include margin-right(md);
+			@include typography-body-2;
+
+			display: inline-block;
+			text-align: center;
+		}
+	}
+
+	&__col-description-section {
+		@extend .col-md-7;
+		@include padding-top(md);
+	}
+
+	&__title {
+		@include typography-h4;
+		@include margin-left(sm);
+	}
+
+	&__details-list {
+		@include margin-top(sm);
+		@include margin-left(sm);
+
+		&-item {
+			@include typography-body-2;
+		}
+	}
+
+	&__button {
+		@include margin-top(sm);
+		@include margin-left(sm);
 	}
 }

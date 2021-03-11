@@ -85,6 +85,8 @@
 		@include margin-top(md);
 		@include margin-bottom(sm);
 
+		color: $color-heading-dark;
+
 		@include breakpoint-up(md) {
 			margin-top: rem(128px);
 		}
@@ -98,6 +100,8 @@
 
 	&__description {
 		@include typography-body-2;
+
+		color: $color-body-dark;
 	}
 
 	&--right {
@@ -145,10 +149,14 @@
 		@include typography-h4;
 		@include margin-top(sm);
 		@include margin-bottom(sm);
+
+		color: $color-heading-dark;
 	}
 
 	&__description {
 		@include typography-body-2;
+
+		color: $color-body-dark;
 	}
 
 	&__button {
@@ -157,14 +165,18 @@
 }
 
 .c-room-card {
+	@include margin-bottom(lg);
 	border-radius: rem(4px);
 
-	&__fow {
+	&__row {
 		@extend .row;
 	}
 
 	&__col-img-section {
 		@extend .col-md-5;
+	}
+
+	&__img-section {
 	}
 
 	&__img {
@@ -174,38 +186,63 @@
 	}
 
 	&__feature-list {
-		@include padding-left(sm);
+		@include padding(xs);
+
+		background: $background-body-light;
+		text-align: center;
 
 		&-item {
-			@include margin-right(md);
+			@include margin-right(sm);
 			@include typography-body-2;
 
+			color: $color-body-dark;
 			display: inline-block;
 			text-align: center;
+
+			@include breakpoint-up(lg) {
+				@include margin-right(md);
+			}
+		}
+
+		@include breakpoint-up(md) {
+			@include margin-top(xs);
 		}
 	}
 
 	&__col-description-section {
 		@extend .col-md-7;
-		@include padding-top(md);
+	}
+
+	&__description-section {
+		@include padding(md);
+		@include padding-left(md);
+
+		background: $background-body-light;
+
+		@include breakpoint-up(md) {
+			@include padding-top(lg);
+
+			height: 350px;
+		}
 	}
 
 	&__title {
 		@include typography-h4;
-		@include margin-left(sm);
+
+		color: $color-heading-dark;
 	}
 
 	&__details-list {
 		@include margin-top(sm);
-		@include margin-left(sm);
 
 		&-item {
 			@include typography-body-2;
+
+			color: $color-body-dark;
 		}
 	}
 
 	&__button {
 		@include margin-top(sm);
-		@include margin-left(sm);
 	}
 }

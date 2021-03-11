@@ -12,14 +12,14 @@
 @import './base/_shadows';
 @import './base/_spacing';
 
+// components
+@import './components/_components';
+
 // layouts
 @import './layout/_layout';
 
 // modules
 @import './modules/_modules';
-
-// components
-@import './components/_components';
 
 // state
 @import './state/_state';

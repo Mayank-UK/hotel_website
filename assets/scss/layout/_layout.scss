@@ -104,6 +104,8 @@
 		@include margin-top(sm);
 		@include typography-body-2;
 
+		color: $color-body-dark;
+
 		@include breakpoint-up(md) {
 			margin-top: 0px;
 		}
@@ -120,21 +122,21 @@
 			background: url('./../images/home/gallery-14.jpg');
 			//have to use properties here, other not working outside this block
 			background-size: cover;
-			background-attachment: fixed;
+			// background-attachment: fixed;
 		}
 
 		&--second {
 			background: url('./../images/home/sign-of-man-on-bull.jpg');
 			//have to use properties here, other not working outside this block
 			background-size: cover;
-			background-attachment: fixed;
+			// background-attachment: fixed;
 		}
 
 		&--third {
 			background: url('./../images/home/gallery-11.jpg');
 			//have to use properties here, other not working outside this block
 			background-size: cover;
-			background-attachment: fixed;
+			// background-attachment: fixed;
 		}
 	}
 }
@@ -192,6 +194,7 @@
 
 	&__address-line {
 		@include typography-body-2;
+		color: $color-body-light;
 	}
 
 	&__button {
@@ -237,8 +240,8 @@
 	}
 
 	&__anchor {
-		color: $color-body-light;
 		@include typography-body-2;
+		color: $color-body-light;
 	}
 
 	&__social {
@@ -303,6 +306,8 @@
 	@include margin-left(sm);
 	@include margin-right(sm);
 	@include typography-body-2;
+
+	color: $color-body-dark;
 }
 
 .l-contact {
@@ -311,6 +316,7 @@
 	&__address {
 		&-line {
 			@include typography-body-2;
+			color: $color-body-dark;
 		}
 	}
 
@@ -319,6 +325,7 @@
 
 		&-target {
 			@include typography-body-2;
+			color: $color-body-dark;
 		}
 
 		&-number {
@@ -332,6 +339,7 @@
 
 		&-target {
 			@include typography-body-2;
+			color: $color-body-dark;
 		}
 
 		&-link {
@@ -341,6 +349,228 @@
 			&--margin {
 				@include margin-bottom(sm);
 			}
+		}
+	}
+}
+
+.l-booking {
+	&__date-picker {
+		text-align: center;
+	}
+
+	&__room-selection {
+	}
+
+	&__review {
+		&-row {
+			@extend .row;
+		}
+
+		&-col-review {
+			@extend .col-md-5;
+		}
+
+		&-review {
+			background: $background-body-light;
+		}
+
+		&-heading {
+			@include margin-bottom(md);
+			@include typography-h6;
+			@include padding(sm);
+
+			color: $color-heading-dark;
+			padding-bottom: 0px;
+
+			&--padding-left-0 {
+				padding-left: 0px;
+			}
+
+			&--margin-bottom-xs {
+				@include margin-bottom(xs);
+			}
+
+			&--inline-block-md {
+				background: red;
+
+				@include breakpoint-up(md) {
+					display: inline;
+					width: 50%;
+				}
+			}
+		}
+
+		&-img {
+			height: rem(256px);
+			object-fit: cover;
+			width: 100%;
+		}
+
+		&-details {
+			@extend .d-flex;
+			@include padding(sm);
+
+			&-name-list {
+				@include typography-body-2;
+
+				color: $color-body-dark;
+				width: 70%;
+			}
+
+			&-name-item {
+				@include margin-bottom(xs);
+			}
+
+			&-value-list {
+				@include typography-subtitle-2;
+
+				color: $color-heading-dark;
+				width: 30%;
+			}
+
+			&-value-item {
+				@include margin-bottom(xs);
+			}
+		}
+
+		&-col-form {
+			@extend .col-md-7;
+		}
+
+		&-form {
+			@include margin-top(lg);
+			@include padding(sm);
+
+			background: $background-body-light;
+
+			&-guest {
+			}
+
+			@include breakpoint-up(md) {
+				margin-top: 0px;
+			}
+
+			&-payment {
+				@include margin-top(lg);
+			}
+		}
+
+		&-field {
+			@include margin-bottom(sm);
+
+			&--margin-top-md {
+				@include margin-top(md);
+			}
+
+			&--margin-left-sm {
+				@include breakpoint-up(lg) {
+					@include margin-left(sm);
+				}
+			}
+
+			&--expiration-date-cvv {
+			}
+
+			&--expiration-date {
+				display: inline-block;
+				width: auto !important;
+			}
+
+			&--cvv {
+				@include margin-left(md);
+
+				display: inline-block;
+				width: auto !important;
+			}
+
+			&--display-block-lg {
+				@include breakpoint-up(lg) {
+					display: block !important;
+				}
+			}
+
+			@include breakpoint-up(lg) {
+				display: inline-block;
+				width: 48%;
+			}
+		}
+
+		&-label {
+			@include typography-body-2;
+			color: $color-body-dark;
+
+			display: block;
+
+			&--inline {
+				display: inline;
+			}
+		}
+
+		&-input {
+			&--mm {
+				width: rem(72px);
+				display: inline-block;
+
+				@include breakpoint-up(md) {
+					width: rem(112px);
+				}
+
+				@include breakpoint-up(lg) {
+					width: rem(72px);
+				}
+			}
+
+			&--yyyy {
+				@include margin-left(xs);
+
+				display: inline-block;
+				width: rem(72px);
+
+				@include breakpoint-up(md) {
+					width: rem(112px);
+				}
+
+				@include breakpoint-up(lg) {
+					width: rem(72px);
+				}
+			}
+
+			&--cvv {
+				width: rem(72px);
+
+				@include breakpoint-up(md) {
+					width: rem(112px);
+				}
+
+				@include breakpoint-up(lg) {
+					width: rem(72px);
+				}
+			}
+		}
+
+		&-icon-list {
+			@include margin-bottom(md);
+
+			@include breakpoint-up(lg) {
+				// float: right;
+			}
+		}
+
+		&-icon-item {
+			height: rem(24px);
+			width: auto;
+			object-fit: contain;
+		}
+
+		&-checkbox {
+			@include margin-top(xs);
+
+			display: inline-block;
+			margin-top: 500px;
+		}
+
+		&-button {
+			@include margin-top(sm);
 		}
 	}
 }

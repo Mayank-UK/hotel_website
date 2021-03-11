@@ -199,6 +199,8 @@
 		@include typography-h4;
 		@include margin-left(sm);
 		@include margin-bottom(lg);
+
+		color: $color-heading-dark;
 	}
 }
 
@@ -257,11 +259,14 @@
 		@include typography-body-2;
 		@include padding(xs);
 
-		display: inline-block;
+		color: $color-body-dark;
 		cursor: pointer;
+		display: inline-block;
 
 		&--active {
 			@include typography-subtitle-2;
+
+			color: $color-heading-dark;
 		}
 	}
 }

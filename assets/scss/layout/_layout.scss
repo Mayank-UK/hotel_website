@@ -65,7 +65,6 @@
 
 	&__button {
 		@include margin-top(sm);
-		display: block;
 	}
 
 	@include breakpoint-up(md) {
@@ -388,14 +387,15 @@
 
 			&--margin-bottom-xs {
 				@include margin-bottom(xs);
+
+				@include breakpoint-up(lg) {
+					@include margin-bottom(md);
+				}
 			}
 
-			&--inline-block-md {
-				background: red;
-
+			&--inline-block-lg {
 				@include breakpoint-up(md) {
-					display: inline;
-					width: 50%;
+					display: inline-block;
 				}
 			}
 		}
@@ -404,6 +404,10 @@
 			height: rem(256px);
 			object-fit: cover;
 			width: 100%;
+
+			@include breakpoint-up(md) {
+				@include padding(sm);
+			}
 		}
 
 		&-details {
@@ -455,6 +459,12 @@
 			}
 		}
 
+		&-payment-heading-with-icons {
+			@include breakpoint-up(lg) {
+				position: relative;
+			}
+		}
+
 		&-field {
 			@include margin-bottom(sm);
 
@@ -497,12 +507,12 @@
 
 		&-label {
 			@include typography-body-2;
-			color: $color-body-dark;
 
+			color: $color-body-dark;
 			display: block;
 
 			&--inline {
-				display: inline;
+				display: inline-block;
 			}
 		}
 
@@ -552,7 +562,11 @@
 			@include margin-bottom(md);
 
 			@include breakpoint-up(lg) {
-				// float: right;
+				@include margin-top(sm);
+
+				display: inline-block;
+				position: absolute;
+				right: 0px;
 			}
 		}
 
@@ -563,10 +577,11 @@
 		}
 
 		&-checkbox {
-			@include margin-top(xs);
+			@include margin-right(xs);
 
 			display: inline-block;
-			margin-top: 500px;
+			position: relative;
+			top: rem(1px);
 		}
 
 		&-button {

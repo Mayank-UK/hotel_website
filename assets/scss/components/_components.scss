@@ -129,7 +129,7 @@
 	&__img {
 		height: rem(400px);
 		background-repeat: no-repeat;
-		object-fit: cover;
+		background-size: cover;
 		width: 100%;
 
 		&-1 {

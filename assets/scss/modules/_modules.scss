@@ -255,7 +255,7 @@
 	text-align: center;
 
 	&__item {
-		@include margin-right(lg);
+		@include margin-right(sm);
 		@include typography-body-2;
 		@include padding(xs);
 
@@ -267,6 +267,10 @@
 			@include typography-subtitle-2;
 
 			color: $color-heading-dark;
+		}
+
+		@include breakpoint-up(md) {
+			@include margin-right(lg);
 		}
 	}
 }

@@ -259,18 +259,17 @@
 	&__social-icon {
 		@include margin-right(xs);
 		background-size: contain;
+		background-repeat: no-repeat;
 		display: inline-block;
 		height: rem(24px);
 		width: rem(24px);
 
 		&--facebook {
 			background-image: url('./../images/icons_logos/facebook.svg');
-			background-image: url('./../images/icons_logos/google_plus.svg');
 		}
 
 		&--twitter {
 			background-image: url('./../images/icons_logos/twitter.svg');
-			background-image: url('./../images/icons_logos/google_plus.svg');
 		}
 
 		&--google-plus {
@@ -279,7 +278,6 @@
 
 		&--instagram {
 			background-image: url('./../images/icons_logos/instagram.svg');
-			background-image: url('./../images/icons_logos/google_plus.svg');
 		}
 	}
 
@@ -298,6 +296,41 @@
 		@include margin-right(xs);
 
 		margin-top: rem(4px);
+	}
+}
+
+.l-modal {
+	background: $background-body-dark;
+	height: 100vh;
+	left: 0px;
+	position: fixed;
+	top: 0px;
+	transition: all 0.5s ease;
+	width: 100vw;
+	z-index: 2;
+
+	&__content {
+		@include padding(md);
+
+		background: $background-body-light;
+		border-radius: rem(4px);
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		&-text {
+			@include typography-h6;
+			color: $color-body-dark;
+		}
+
+		&-button {
+			@include margin-top(md);
+		}
+	}
+
+	&--hide {
+		display: none;
 	}
 }
 
@@ -353,8 +386,16 @@
 }
 
 .l-booking {
+	&__section {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+
 	&__date-picker {
-		text-align: center;
+		@include padding(sm);
 	}
 
 	&__room-selection {

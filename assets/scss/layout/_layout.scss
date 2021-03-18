@@ -318,14 +318,23 @@
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		width: 90%;
 
 		&-text {
-			@include typography-h6;
+			@include typography-subtitle-2;
 			color: $color-body-dark;
 		}
 
 		&-button {
 			@include margin-top(md);
+		}
+
+		@include breakpoint-up(md) {
+			width: 60%;
+		}
+
+		@include breakpoint-up(lg) {
+			width: 30%;
 		}
 	}
 
